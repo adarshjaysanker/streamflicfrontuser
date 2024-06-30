@@ -1,0 +1,17 @@
+.app{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup{
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.signup input{
+  margin: 20px;
+}

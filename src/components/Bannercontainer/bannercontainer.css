@@ -1,0 +1,145 @@
+.banner-container{
+    background-image: url("https://is3-ssl.mzstatic.com/image/thumb/Video114/v4/db/3f/23/db3f2321-78dd-a3f6-f119-5fdbff6abb60/pr_source.lsr/2000x1125.jpg");
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-content{
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 80%;
+    width: 100%;
+    margin: 0 20px;
+}
+
+.banner-title{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.banner-description{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.banner-buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner-button{
+    margin: 5px 0;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.banner-button:hover{
+    background-color: #0056b3;
+}
+
+
+
+
+
+@media(max-width: 767px){
+  .banner-container{
+    min-height: 60vh;
+    background-position: top;
+  }
+  .banner-title{
+    font-size: 2rem;
+  }
+  .banner-description{
+    font-size: 1rem;
+  }
+  .banner-button{
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media(min-width: 768px){
+  .banner-container{
+    min-height: 70vh;
+    background-position: center;
+  }
+  .banner-content{
+    max-width: 70%;
+  }
+  .banner-title{
+    font-size: 3rem;
+  }
+  .banner-description{
+    font-size: 1.4rem;
+  }
+  .banner-buttons{
+    flex-direction: row;
+  }
+  .banner-button{
+    margin: 0 10px;
+  }
+}
+
+@media(min-width: 992px){
+  .banner-container{
+    min-height: 80vh;
+    background-position: center;
+}
+  .banner-content{
+    max-width: 60%;
+  }
+  .banner-title{
+    font-size: 3.5rem;
+  }
+  .banner-description{
+    font-size: 1.6rem;
+  }
+  .banner-buttons{
+    justify-content: center;
+  }
+  .banner-button{
+    font-size: 1.1rem;
+  }
+}
+
+@media(min-width: 1200px){
+  .banner-container{
+    min-height: 80vh;
+    background-position: center;
+}
+  .banner-content{
+    max-width: 50%;
+  }
+  .banner-title{
+    font-size: 4rem;
+  }
+  .banner-description{
+    font-size: 1.8rem;
+  }
+  .banner-button{
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+
+
+
