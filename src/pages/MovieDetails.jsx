@@ -11,7 +11,7 @@ function MovieDetails() {
 
     const fetchMovieDetails = async() => {
         try {
-            const response = await fetch (`http://localhost:5000/getvideo/${id}`,{
+            const response = await fetch (`https://api.streamflics.xyz/getvideo/${id}`,{
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'

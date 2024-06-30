@@ -10,7 +10,7 @@ function Rowcontainer() {
 
     const fetchAllMovies = async() => {
         try{
-            const response = await fetch('http://localhost:5000/getallvideos',{
+            const response = await fetch('https://api.streamflics.xyz/getallvideos',{
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
