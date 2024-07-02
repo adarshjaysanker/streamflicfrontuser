@@ -41,7 +41,7 @@ function Home() {
 
   return (
     <div>
-      <Header/>
+      <Header logout={handleLogout}/>
       <Bannercontainer/>
       <Rowcontainer/>
     </div>

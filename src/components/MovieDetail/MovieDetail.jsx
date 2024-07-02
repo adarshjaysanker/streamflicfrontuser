@@ -9,7 +9,6 @@ function MovieDetail({movie, banner}) {
   const navigate = useNavigate();
 
    
-   const imageUrl = banner
 
   
   console.log(movie);
@@ -21,7 +20,11 @@ function MovieDetail({movie, banner}) {
    
   
 return(
-  <div className='movie-detail' style={{backgroundImage: `url(${imageUrl})`}}>
+  <div className='movie-detail'>
+    <video className='background-video' autoPlay muted loop>
+      <source src={movie.trailerVideo} type='video/mp4'/>
+      Your browser does not support the video tag
+    </video>
     <div className="movie-detail-overlay">
       <div className="movie-banner">
         <div className="movie-banner-content">
