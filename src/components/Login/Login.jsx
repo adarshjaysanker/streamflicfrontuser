@@ -35,6 +35,7 @@ function Login() {
   return (
     <div className='auth-container'>
       <form className="auth-form" onSubmit={handleSubmit}>
+        <h1 className='app-name'>StreamFlics</h1>
         <h2>Login to your Account</h2>
         <div className="form-group">
             <label htmlFor="email">Email</label>

@@ -40,6 +40,7 @@ function Signup() {
   return (
     <div className='auth-container'>
       <form className="auth-form" onSubmit={handleSubmit}>
+        <h1>StreamFlics</h1>
         <h2>Create Your Account</h2>
         <div className="form-group">
             <label htmlFor="name">Full Name</label>
