@@ -15,15 +15,17 @@ function Login() {
         try{
            const res = await fetch('https://api.streamflics.xyz/login',{
             method: 'POST',
-            headers: {'Content-Type': 'application/json'},
+            headers: {
+              'Content-Type': 'application/json'
+            },
             body: JSON.stringify({email, password})
-           }) ;
+           })
            if(res.ok){
             const data = await res.json();
             const {token} = data;
             localStorage.setItem('authToken', token);
             navigate('/')
-           }
+          }
         }catch(error){
             console.error(error);
             alert('error logging in');
