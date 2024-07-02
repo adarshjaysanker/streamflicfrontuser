@@ -18,7 +18,7 @@ function Signup() {
         return alert('Passwords do not match');
        }
        try{
-        const res = await fetch('http://localhost:5000/signup',{
+        const res = await fetch('https://api.streamflics.xyz/signup',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
