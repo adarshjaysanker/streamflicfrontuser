@@ -20,6 +20,7 @@ function Home() {
         const token = localStorage.getItem('authToken');
         if(!token){
           navigate('/login');
+          return;
         }
         const res = await fetch('https://api.streamflics.xyz/gethome',{
           method: 'GET',
@@ -30,6 +31,8 @@ function Home() {
         if(res.ok){
           const data = await res.json();
           console.log(data.message);
+        }else{
+          navigate('/login');
         }
       }catch(error){
         console.error(error);
