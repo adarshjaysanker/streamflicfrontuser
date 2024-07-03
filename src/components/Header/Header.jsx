@@ -13,8 +13,6 @@ function Header({logout}) {
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
-    const na = document.getElementById('n');
-    console.log(na);
   }
 
   

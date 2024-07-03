@@ -6,23 +6,27 @@ import MovieDetails from './pages/MovieDetails';
 import Videoplayer from './components/Videoplayer/Videoplayer';
 import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
+import { UserProvider } from './Usecontext/UserContext';
 
 
 
 function App() {
 
   return (
-    <Router>
-      <div className="App">
-          <Routes>
-            <Route path='/' element={<Home/>}/>
-            <Route path='/movie/:id' element={<MovieDetails/>}/>
-            <Route path='/watch/:movie' element={<Videoplayer/>}/>
-            <Route path='/login' element={<Login/>}/>
-            <Route path='/signup' element={<Signup/>}/>
-          </Routes>
-      </div>
-    </Router> 
+    <UserProvider>
+      <Router>
+        <div className="App">
+            <Routes>
+              <Route path='/' element={<Home/>}/>
+              <Route path='/movie/:id' element={<MovieDetails/>}/>
+              <Route path='/watch/:movie' element={<Videoplayer/>}/>
+              <Route path='/login' element={<Login/>}/>
+              <Route path='/signup' element={<Signup/>}/>
+            </Routes>
+        </div>
+     </Router> 
+    </UserProvider>
+    
   );
 }
 

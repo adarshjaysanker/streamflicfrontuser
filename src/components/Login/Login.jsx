@@ -1,19 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useState } from 'react'
-import {Link, useNavigate} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import './login.css'
+import Welcome from '../Welcome/Welcome';
+import { UserContext } from '../../Usecontext/UserContext';
 
 function Login() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [token, setToken] = useState(null);
+    const {setUserDetails} = useContext(UserContext)
 
-    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try{
-           const res = await fetch('https://api.streamflics.xyz/login',{
+           const res = await fetch('http://localhost:5000/login',{
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -22,14 +25,21 @@ function Login() {
            })
            if(res.ok){
             const data = await res.json();
-            const {token} = data;
+            const {token, user} = data;
             localStorage.setItem('authToken', token);
-            navigate('/')
+            setToken(token);
+            setUserDetails(user)
+          }else{
+            alert('Invalid Username or Password. Please try again');
           }
         }catch(error){
             console.error(error);
             alert('error logging in');
         }
+    }
+
+    if(token){
+      return <Welcome/>
     }
 
   return (
