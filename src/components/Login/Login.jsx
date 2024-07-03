@@ -16,7 +16,7 @@ function Login() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try{
-           const res = await fetch('http://localhost:5000/login',{
+           const res = await fetch('https://api.streamflics.xyz/login',{
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
