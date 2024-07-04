@@ -23,7 +23,7 @@ function Home() {
         navigate('/login');
         return;
       }
-      const res = await fetch('http://localhost:5000/gethome',{
+      const res = await fetch('https://api.streamflics.xyz/gethome',{
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -48,7 +48,7 @@ function Home() {
         navigate('/login');
         return;
       }
-      const res = await fetch('http://localhost:5000/getrandommovie',{
+      const res = await fetch('https://api.streamflics.xyz/getrandommovie',{
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`
